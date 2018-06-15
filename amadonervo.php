@@ -43,7 +43,7 @@
 </body>
 <script>
     $(document).ready(function() {
-        $("#aIndex").addClass("currentPage");
+        $("#aAmado").addClass("currentPage");
     });
 </script>
 </html>

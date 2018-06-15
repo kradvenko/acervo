@@ -30,9 +30,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="">
-                <img src="imgs/slide1.jpg" class="mainImg"/>
-            </div>
+            
         </div>
         <div class="row divBackgroundBlack">
             <div class="col-12 mainFooter">
@@ -43,7 +41,7 @@
 </body>
 <script>
     $(document).ready(function() {
-        $("#aIndex").addClass("currentPage");
+        $("#aContacto").addClass("currentPage");
     });
 </script>
 </html>
