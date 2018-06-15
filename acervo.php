@@ -25,12 +25,22 @@
             <div class="menuContainer">
                 <?php
                     require_once('php/menu.php');
-                    echo menu('ACA');
+                    echo menu();
                 ?>
             </div>
         </div>
         <div class="row">
-            
+            <div class="col-12">
+
+            </div>
+            <div class="col-4 divAcervoBien">
+                <div class="divAcervoBienHeader">
+                    <label>Fotografías</label>
+                </div>
+                <div class="divAcervoBienHedearImg">
+                    <img src="imgs/fotografiasub.jpg">
+                </div>
+            </div>
         </div>
         <div class="row divBackgroundBlack">
             <div class="col-12 mainFooter">
