@@ -26,21 +26,126 @@
                 <?php
                     require_once('php/menu.php');
                     echo menu();
+                    require_once('php/functions.php');
                 ?>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-
-            </div>
-            <div class="col-4 divAcervoBien">
+            <div class="col-4 divAcervoBien" onclick="window.location.assign('verbienes.php?tipo=fotografia')">
                 <div class="divAcervoBienHeader">
                     <label>Fotografías</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
                     <img src="imgs/fotografiasub.jpg">
                 </div>
+                <div class="divAcervoBienFooter">
+                    Número de bienes registrados <br />
+                    <?php 
+                        echo obtenerTotalBienes("fotografia");
+                    ?>
+                </div>
             </div>
+            <div class="col-4 divAcervoBien">
+                <div class="divAcervoBienHeader">
+                    <label>Libros</label>
+                </div>
+                <div class="divAcervoBienHedearImg">
+                    <img src="imgs/librosub.jpg">
+                </div>
+                <div class="divAcervoBienFooter">
+                    Número de bienes registrados
+                </div>
+            </div>
+            <div class="col-4 divAcervoBien">
+                <div class="divAcervoBienHeader">
+                    <label>Hemerografía</label>
+                </div>
+                <div class="divAcervoBienHedearImg">
+                    <img src="imgs/hemerografiasub.jpg">
+                </div>
+                <div class="divAcervoBienFooter">
+                    Número de bienes registrados
+                </div>
+            </div>
+        </div>
+        <div class="row divSeparator">
+
+        </div>
+        <div class="row">
+            <div class="col-4 divAcervoBien">
+                <div class="divAcervoBienHeader">
+                    <label>Poesías</label>
+                </div>
+                <div class="divAcervoBienHedearImg">
+                    <img src="imgs/poesiasub.jpg">
+                </div>
+                <div class="divAcervoBienFooter">
+                    Número de bienes registrados
+                </div>
+            </div>
+            <div class="col-4 divAcervoBien">
+                <div class="divAcervoBienHeader">
+                    <label>Correspondencia</label>
+                </div>
+                <div class="divAcervoBienHedearImg">
+                    <img src="imgs/correspondenciasub.jpg">
+                </div>
+                <div class="divAcervoBienFooter">
+                    Número de bienes registrados
+                </div>
+            </div>
+            <div class="col-4 divAcervoBien">
+                <div class="divAcervoBienHeader">
+                    <label>Documentos</label>
+                </div>
+                <div class="divAcervoBienHedearImg">
+                    <img src="imgs/documentosub.jpg">
+                </div>
+                <div class="divAcervoBienFooter">
+                    Número de bienes registrados
+                </div>
+            </div>
+        </div>
+        <div class="row divSeparator">
+
+        </div>
+        <div class="row">
+            <div class="col-4 divAcervoBien">
+                <div class="divAcervoBienHeader">
+                    <label>Revistas</label>
+                </div>
+                <div class="divAcervoBienHedearImg">
+                    <img src="imgs/revistasub.jpg">
+                </div>
+                <div class="divAcervoBienFooter">
+                    Número de bienes registrados
+                </div>
+            </div>
+            <div class="col-4 divAcervoBien">
+                <div class="divAcervoBienHeader">
+                    <label>Objetos</label>
+                </div>
+                <div class="divAcervoBienHedearImg">
+                    <img src="imgs/objetosub.jpg">
+                </div>
+                <div class="divAcervoBienFooter">
+                    Número de bienes registrados
+                </div>
+            </div>
+            <div class="col-4 divAcervoBien">
+                <div class="divAcervoBienHeader">
+                    <label>Pinturas y dibujos</label>
+                </div>
+                <div class="divAcervoBienHedearImg">
+                    <img src="imgs/pinturasub.jpg">
+                </div>
+                <div class="divAcervoBienFooter">
+                    Número de bienes registrados
+                </div>
+            </div>
+        </div>
+        <div class="row divSeparator">
+
         </div>
         <div class="row divBackgroundBlack">
             <div class="col-12 mainFooter">
