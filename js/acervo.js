@@ -7,3 +7,7 @@ function obtenerBienes() {
         $('#divBienes').html(res);
     }});
 }
+
+function verDetallesBien(id) {
+    alert(id);
+}

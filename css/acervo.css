@@ -400,3 +400,28 @@ body {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+.divCard {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.divCard:hover {
+    background-color: #f1f1f1;
+    max-height: 100%;
+}
+
+.divCard:hover .divCardHeader{
+    min-height: 50%;
+    background-color: rgba(102, 70, 70, 0.8);
+    color: white;
+}
+
+.divCardHeader {
+    color: transparent;
+    background-color: rgba(102, 70, 70, 0);
+    min-width: 100%;
+    transition: all 0.5s;
+    position: absolute;
+}
