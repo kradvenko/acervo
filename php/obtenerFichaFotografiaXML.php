@@ -15,7 +15,8 @@
         $sql = "Select fichasfotografia.*, instituciones.nombreInstitucion,
                 CA.ciudad As ciudadAsunto,
                 CT.ciudad As ciudadToma,
-                estudiosfotograficos.estudio, albumes.album, C.nombre
+                estudiosfotograficos.estudio, albumes.album, C.nombre,
+                paises.pais
                 From fichasfotografia
                 Left Join instituciones
                 On fichasfotografia.idinstitucion = instituciones.idinstitucion
@@ -26,7 +27,9 @@
                 Left Join estudiosfotograficos
                 On fichasfotografia.idestudio = estudiosfotograficos.idestudiofotografico
                 Left Join albumes
-                On fichasfotografia.idalbum = albumes.idalbum
+                On fichasfotografia.idalbum = albumes.idalbum                
+                Left Join paises
+                On paises.idpais = instituciones.idpais
                 Left Join usuarios C
                 On fichasfotografia.idpersonacaptura = C.idusuario
                 Where fichasfotografia.idfichafotografia = $idFichaFotografia";
@@ -88,6 +91,7 @@
             echo "<estudio>" . $row['estudio'] . "</estudio>\n";
             echo "<album>" . $row['album'] . "</album>\n";
             echo "<nombre>" . $row['nombre'] . "</nombre>\n";
+            echo "<pais>" . $row['pais'] . "</pais>\n";
         }
 
         echo "</resultado>\n";

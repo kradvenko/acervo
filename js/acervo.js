@@ -11,10 +11,13 @@ function obtenerBienes() {
 function verDetallesBien(id, rutaimagen) {
     $.ajax({url: "php/obtenerFichaFotografiaXML.php", async: false, type: "POST", data: { idFichaFotografia: id }, success: function(res) {
         $('resultado', res).each(function(index, element) {
-            $("#divTituloFotografia").html($(this).find("titulo").text());
-            $("#divImagenBien").html("<img src='" + rutaimagen + "' />");
+            $("#divFotografiaTitulo").html($(this).find("titulo").text());
+            $("#divFotografiaImagen").html("<img src='" + rutaimagen + "' />");            
+            $("#divFotografiaInstitucion").html($(this).find("nombreInstitucion").text());
+            $("#divFotografiaFechaToma").html($(this).find("fechatoma").text());
+            $("#divFotografiaPais").html($(this).find("pais").text());
+            
             /*
-            $("#tbInstitucion").val($(this).find("nombreInstitucion").text());
             ff_InstitucionElegida = $(this).find("idinstitucion").text();
             $("#tbNumeroInterno").val($(this).find("numeroregistrointerno").text());
             $("#tbNumeroInventario").val($(this).find("numeroinventario").text());
@@ -24,7 +27,7 @@ function verDetallesBien(id, rutaimagen) {
             $("#tbLugarToma").val($(this).find("ciudadToma").text());
             ff_LugarToma = $(this).find("idciudadtoma").text();
             $("#tbFechaAsunto").val($(this).find("fechaasunto").text());
-            $("#tbFechaToma").val($(this).find("fechatoma").text());
+            
             $("#tbEstudio").val($(this).find("estudio").text());
             ff_Estudio = $(this).find("idestudio").text();
             $("#tbAlbum").val($(this).find("album").text());
