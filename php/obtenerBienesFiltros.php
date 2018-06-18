@@ -6,9 +6,13 @@
         $idPais = $_POST["idPais"];
         $tipoFicha = $_POST["tipoFicha"];
 
+        $urlImagen = "";
+        $urlThumb = "";
+
         switch ($tipoFicha) {
             case "fotografia":
-                                $url = $url . "/imagenesbienes/thumbs/fotografias/";
+                                $urlImagen = $url . "/";
+                                $urlThumb = $url . "/imagenesbienes/thumbs/fotografias/";
                                 break;
         }
 
@@ -23,7 +27,8 @@
                 On $tablaImagen.id$tipoFicha = $tablaFicha.idficha$tipoFicha
                 Left Join instituciones
                 On instituciones.idinstitucion = $tablaFicha.idinstitucion
-                Where instituciones.idpais Like '$idPais'
+                Where instituciones.idpais Like '$idPais' And $tablaImagen.aprobada = 'SI'
+                Order By $tablaFicha.idficha$tipoFicha
                 Limit 50";
         
         $result = $con->query($sql);
@@ -42,15 +47,15 @@
                                     break;
             }
             echo "</div>";
-            echo "<div>";
+            echo "<div class='divCardBody'>";
             if (strlen($row["thumbnail"]) == 0) {
-                echo "<img src='" . $url . "no-image.jpg" . "' />";
+                echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
             } else {
-                echo "<img src='" . $url . $row["thumbnail"] . "' />";
+                echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
             }
             echo "</div>";
             echo "<div>";
-            echo "<button class='btn fl ghost' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ")'>Detalles</button>";
+            echo "<button class='btn fl ghost' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>Detalles</button>";
             echo "</div>";
             echo "</div>";
         }

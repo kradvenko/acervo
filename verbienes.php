@@ -64,6 +64,34 @@
             </div>
         </div>
     </div>
+    <!--VENTANAS MODALES-->
+    <!--Ventana modal para ver los detalles de un bien fotografía-->
+    <div class="modal fade" id="modalMostrarFotografia" tabindex="-1" role="dialog" aria-labelledby="modalMostrarFotografia" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Fotografía</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row divVerBienElementoLabel">
+                        Título de la fotografía
+                    </div>
+                    <div class="row divVerBienElementoContenido" id="divTituloFotografia">
+
+                    </div>
+                    <div class="row divVerBienElementoContenidoImagen" id="divImagenBien">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn fl ghost" data-dismiss="modal" onclick="">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     $(document).ready(function() {
