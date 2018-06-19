@@ -41,6 +41,9 @@
                     <div class="dropdown">
                         <a href="contacto.php" id="aContacto" class="mainMenuElement">Contacto</a>                        
                     </div>
+                    <div class="dropdown">
+                        <a href="instituciones.php" id="aInstituciones" class="mainMenuElement">Instituciones</a>
+                    </div>
             </div>
             ';
             $menu = '
@@ -53,9 +56,9 @@
                     </div>
                     <div class="dropdown">
                         <a href="acervo.php" id="aAcervo" class="mainMenuElement">Acervo</a>
-                    </div>
+                    </div>                    
                     <div class="dropdown">
-                        <a href="instituciones.php" id="aInstituciones" class="mainMenuElement">Instituciones</a>
+                        <a href="paises.php" id="aPaises" class="mainMenuElement">Países</a>
                     </div>
                     <div class="dropdown">
                         <a href="galerias.php" id="aGalerias"class="mainMenuElement">Galerías</a>                        

@@ -401,6 +401,16 @@ body {
     background-color: #3e8e41;
 }
 
+.divPageShortInfo {
+    font-family: 'Montserrat', sans-serif;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    background-color: rgb(219, 219, 219);
+}
+
 .divCard {
     text-align: center;
     padding: 5px;
@@ -450,4 +460,26 @@ body {
 
 .divVerBienElementoContenidoImagen img{
     max-height: 500px;
+}
+
+.divPaisMainContainer {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.divPaisMainHeader {
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.divPaisMainImage {
+    float: left;
+}
+
+.divPaisMainInfo {
+    float: right;
+    font-size: 14px;
+}
+
+.divPaisMainContainer img {
+    max-height: 100px;
 }
