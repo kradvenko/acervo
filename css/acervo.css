@@ -445,12 +445,14 @@ body {
     font-size: 18px;
     border-bottom: 1px solid black;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 5px;    
+    text-align: center;
 }
 
 .divVerBienElementoContenido {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    text-align: center;
 }
 
 .divVerBienElementoContenidoImagen {
@@ -459,6 +461,7 @@ body {
 }
 
 .divVerBienElementoContenidoImagen img{
+<<<<<<< HEAD
     max-height: 500px;
 }
 
@@ -482,4 +485,7 @@ body {
 
 .divPaisMainContainer img {
     max-height: 100px;
+=======
+    max-height: 400px;
+>>>>>>> 639251943cc46ef4c6cd64654063acfd09c1d551
 }

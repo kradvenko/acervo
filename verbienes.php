@@ -79,11 +79,33 @@
                     <div class="row divVerBienElementoLabel">
                         Título de la fotografía
                     </div>
-                    <div class="row divVerBienElementoContenido" id="divTituloFotografia">
+                    <div class="row divVerBienElementoContenido" id="divFotografiaTitulo">
 
                     </div>
-                    <div class="row divVerBienElementoContenidoImagen" id="divImagenBien">
+                    <div class="row divVerBienElementoContenidoImagen" id="divFotografiaImagen">
 
+                    </div>
+                    <div class="row">
+                        <div class="col-4 divVerBienElementoLabel">
+                            Institución
+                        </div>
+                        <div class="col-4 divVerBienElementoLabel">
+                            Fecha
+                        </div>
+                        <div class="col-4 divVerBienElementoLabel">
+                            País
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 divVerBienElementoContenido" id="divFotografiaInstitucion">
+
+                        </div>
+                        <div class="col-4 divVerBienElementoContenido" id="divFotografiaFechaToma">
+
+                        </div>
+                        <div class="col-4 divVerBienElementoContenido" id="divFotografiaPais">
+
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
