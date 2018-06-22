@@ -34,13 +34,36 @@
         </div>
         <div class="row">
             <div class="col-12 divPageShortInfo">
-                La obra artística de Amado Nervo forma parte del tesoro cultural de los muchos países en los que el autor vivió y los que visitó, ya fuera
-                llevado por su naturaleza viajera o por las responsabilidades de sus cargos oficiales.
+                
+            </div>
+        </div>
+        <?php
+            obtenerNombrePais($_GET["idpais"]);
+        ?>
+        <div class="row divPageShortInfo">
+            <div class="col-1">
+
+            </div>
+            <div class="col-1 labelType01">
+                Instituciones
             </div>
         </div>
         <div class="row">
             <?php
-                obtenerPaisesMain();
+                obtenerInstitucionesPais($_GET["idpais"]);
+            ?>
+        </div>
+        <div class="row divPageShortInfo">
+            <div class="col-1">
+
+            </div>
+            <div class="col-1 labelType01">
+                Ciudades
+            </div>
+        </div>
+        <div class="row">
+            <?php
+                obtenerCiudadesPais($_GET["idpais"]);
             ?>
         </div>
         <div class="row divBackgroundBlack">

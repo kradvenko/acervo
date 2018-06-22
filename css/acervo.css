@@ -130,7 +130,8 @@ body {
 }
 
 .labelType01 {
-    font-size: 14px;    
+    font-size: 25px;
+    font-family: 'Poiret One', cursive;
 }
 
 .textbox-center {
@@ -461,12 +462,13 @@ body {
 }
 
 .divVerBienElementoContenidoImagen img{
-<<<<<<< HEAD
     max-height: 500px;
 }
 
 .divPaisMainContainer {
     font-family: 'Montserrat', sans-serif;
+    min-height: 200px;
+    position: relative;
 }
 
 .divPaisMainHeader {
@@ -474,7 +476,7 @@ body {
     margin-bottom: 5px;
 }
 
-.divPaisMainImage {
+.divPaisMainImage{
     float: left;
 }
 
@@ -484,8 +486,87 @@ body {
 }
 
 .divPaisMainContainer img {
-    max-height: 100px;
-=======
-    max-height: 400px;
->>>>>>> 639251943cc46ef4c6cd64654063acfd09c1d551
+    height: 100px;
+}
+
+.divPaisBienHeader {
+    font-family: 'Poiret One', cursive;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    height: 50px;
+}
+
+.bk-mx {
+    background-image: url(../imgs/mx-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-ar {
+    background-image: url(../imgs/ar-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-br {
+    background-image: url(../imgs/br-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-ca {
+    background-image: url(../imgs/ca-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-cu {
+    background-image: url(../imgs/cu-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-es {
+    background-image: url(../imgs/es-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-us {
+    background-image: url(../imgs/us-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-fr {
+    background-image: url(../imgs/fr-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-gb {
+    background-image: url(../imgs/gb-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-pt {
+    background-image: url(../imgs/pt-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-uy {
+    background-image: url(../imgs/uy-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bk-ve {
+    background-image: url(../imgs/ve-trans.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
