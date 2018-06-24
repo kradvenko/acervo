@@ -144,6 +144,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn fl ghost" onclick="verFichaBien()">Ver ficha del bien</button>
                     <button type="button" class="btn fl ghost" data-dismiss="modal" onclick="">Cerrar</button>
                 </div>
             </div>

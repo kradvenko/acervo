@@ -670,6 +670,48 @@
         }
     }
 
+    function obtenerInfoAlbum($idalbum) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+
+            $sql = "Select *
+                    From albumes
+                    Where idalbum = $idalbum";
+
+            $result = $con->query($sql);
+
+            while ($row = $result->fetch_array()) {
+                echo "<div class='col-1'>";
+                echo "";
+                echo "</div>";
+                echo "<div class='col-2'>";
+                echo "<b>Nombre del albúm</b>: ";
+                echo "</div>";
+                echo "<div class='col-9'>";
+                echo $row["album"];
+                echo "</div>";
+                echo "<div class='col-1'>";
+                echo "";
+                echo "</div>";
+                echo "<div class='col-2'>";
+                echo "<b>Descripción</b>: ";
+                echo "</div>";
+                echo "<div class='col-9'>";
+                echo $row["descripcion"];
+                echo "</div>";
+            }            
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            echo $t;
+        }
+    }
+
     function obtenerTotalBienesAlbum($idalbum, $tipo) {
         try
         {
@@ -688,6 +730,79 @@
             $row = $result->fetch_array();
 
             return $row["C"];
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            return $t;
+        }
+    }
+
+    function obtenerIdAlbumFicha($idficha, $tipo) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+
+            $sql = "Select idalbum
+                    From fichas$tipo                    
+                    Where idficha$tipo = $idficha";
+
+            $result = $con->query($sql);
+
+            $row = $result->fetch_array();
+
+            return $row["idalbum"];
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            return $t;
+        }
+    }
+
+    function obtenerImagenesFicha($idficha, $tipo) {
+        try
+        {
+            require('connection.php');
+
+            $urlImagen = "";
+            $urlThumb = "";
+
+            switch ($tipo) {
+                case "fotografia":
+                                    $urlImagen = $url . "/";
+                                    $urlThumb = $url . "/imagenesbienes/thumbs/fotografias/";
+                                    break;
+            }
+
+            $con = new mysqli($hn, $un, $pw, $db);
+
+            $sql = "Select *
+                    From fichas$tipo
+                    Left Join " . $tipo . "imagenes
+                    On fichas$tipo.idficha$tipo = " . $tipo . "imagenes.id$tipo
+                    Where idficha$tipo = $idficha And " . $tipo ."imagenes.aprobada = 'SI'";
+
+            $result = $con->query($sql);
+
+            while ($row = $result->fetch_array()) {
+                echo "<div class='col-3 divCard'>";
+                echo "<div class='divCardBody'>";
+                if (strlen($row["thumbnail"]) == 0) {
+                    echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
+                } else {
+                    echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
+                }
+                echo "</div>";
+                echo "<div>";
+                echo "<button class='btn fl ghost' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verFotoBien(" . $row["idficha$tipo"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>Ver</button>";
+                echo "</div>";
+                echo "</div>";
+            } 
 
             mysqli_close($con);
         }

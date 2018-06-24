@@ -69,6 +69,13 @@
 
         while ($row = $result->fetch_array()) {
             echo "<div class='col-3 divCard'>";
+            echo "<div class='divCardBody'>";
+            if (strlen($row["thumbnail"]) == 0) {
+                echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
+            } else {
+                echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
+            }
+            echo "</div>";
             echo "<div class='divCardHeader'>";
             switch ($tipoFicha) {
                 case "fotografia":
@@ -81,17 +88,28 @@
                                     break;
             }
             echo "</div>";
-            echo "<div class='divCardBody'>";
-            if (strlen($row["thumbnail"]) == 0) {
-                echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
-            } else {
-                echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
-            }
-            echo "</div>";
             echo "<div>";
             echo "<button class='btn fl ghost' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>Detalles</button>";
             echo "</div>";
             echo "</div>";
+        }
+
+        if ($totalRegistros > 0) {
+            echo "<div class='col-12 gridNavigation'>";
+            for ($i = 1; $i <= ceil($totalRegistros/40); $i++) {                
+                if ($i == $currentPage) {
+                    echo "<span class='gridCurrentPage' onclick='irPagina($i)'>";
+                } else 
+                {
+                    echo "<span onclick='irPagina($i)'>";
+                }
+                echo $i;
+                echo "</span>";
+            }
+            echo "</div>";
+        } else {
+            echo "No existen bienes registrados.";
+            return;
         }
 
         mysqli_close($con);

@@ -412,10 +412,31 @@ body {
     background-color: rgb(219, 219, 219);
 }
 
+.divPageShortInfo2 {
+    font-family: 'Montserrat', sans-serif;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.divPageShortInfo3 {
+    font-family: 'Montserrat', sans-serif;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    background-color: rgb(219, 219, 219);
+    text-align: center;
+}
+
 .divCard {
     text-align: center;
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
+    height: 400px;
 }
 
 .divCard:hover {
@@ -424,17 +445,17 @@ body {
 }
 
 .divCard:hover .divCardHeader{
-    min-height: 50%;
     background-color: rgba(102, 70, 70, 0.8);
     color: white;
 }
 
 .divCardHeader {
-    color: transparent;
+    color: #000000;
     background-color: rgba(102, 70, 70, 0);
     min-width: 100%;
     transition: all 0.5s;
-    position: absolute;
+    border: 1px solid #f07444;
+    height: 140px;
 }
 
 .divCardBody {
