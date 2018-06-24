@@ -344,6 +344,31 @@
             $result = $con->query($sql);
             
             while ($row = $result->fetch_array()) {
+                return $row["pais"];
+            }
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            return $t;
+        }
+    }
+
+    function obtenerHeaderPais($idpais) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+            
+            $sql = "Select *
+                    From paises
+                    Where idpais = $idpais";
+    
+            $result = $con->query($sql);
+            
+            while ($row = $result->fetch_array()) {
                 echo '<div class="row divPaisBienHeader">';
                 echo '<div class="col-1">';
                 echo '</div>';
@@ -362,6 +387,56 @@
         catch (Throwable $t)
         {
             echo $t;
+        }
+    }
+
+    function obtenerNombreInstitucion($idinstitucion) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+            
+            $sql = "Select *
+                    From instituciones
+                    Where idinstitucion = $idinstitucion";
+    
+            $result = $con->query($sql);
+            
+            while ($row = $result->fetch_array()) {
+                return $row["nombreInstitucion"];
+            }
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            return $t;
+        }
+    }
+
+    function obtenerNombreCiudad($idciudad) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+            
+            $sql = "Select *
+                    From ciudades
+                    Where idciudad = $idciudad";
+    
+            $result = $con->query($sql);
+            
+            while ($row = $result->fetch_array()) {
+                return $row["ciudad"];
+            }
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            return $t;
         }
     }
 
@@ -397,7 +472,52 @@
                 echo "</h4>";
                 echo "</div>";
                 echo "<div>";
-                echo "<button class='btn fl ghost' onclick=''>Ir</button>";
+                echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
+                echo "</div>";
+                echo "</div>";
+            }
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            echo $t;
+        }
+    }
+
+    function obtenerInstitucionesCiudad($idciudad) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+            
+            $sql = "Select *
+                    From instituciones
+                    Where idciudad = $idciudad";
+    
+            $result = $con->query($sql);
+            
+            while ($row = $result->fetch_array()) {
+                echo "<div class='col-3 divCard'>";
+                echo "<div class='divCardBody'>";
+                /*
+                if (strlen($row["thumbnail"]) == 0) {
+                    echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
+                } else {
+                    echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
+                }
+                */
+                echo "<label class='labelType01'>" . $row["nombreInstitucion"] . "</label>";
+                echo "<h4 class=''>Bienes</h4>";
+                echo "<h4 class=''>";
+                echo (obtenerTotalFotografiasInstitucion($row["idinstitucion"]) + obtenerTotalPublicacionesInstitucion($row["idinstitucion"]) +
+                        obtenerTotalLibrosInstitucion($row["idinstitucion"])
+                    );
+                echo "</h4>";
+                echo "</div>";
+                echo "<div>";
+                echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
                 echo "</div>";
                 echo "</div>";
             }
@@ -444,7 +564,7 @@
                 echo "</h4>";
                 echo "</div>";
                 echo "<div>";
-                echo "<button class='btn fl ghost' onclick=''>Ir</button>";
+                echo "<button class='btn fl ghost' onclick='verBienesCiudad(" . $row["idciudad"] . ", " . $row["idpais"] . ")'>Ir</button>";
                 echo "</div>";
                 echo "</div>";
             }
@@ -454,6 +574,126 @@
         catch (Throwable $t)
         {
             echo $t;
+        }
+    }
+
+    function obtenerTotalBienesInstitucion($tipoFicha, $idinstitucion) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+
+            $sql = "Select Count(*) As C
+                    From fichas" . $tipoFicha . "
+                    Where estado = 'ACTIVO' And idinstitucion = $idinstitucion";
+
+            $result = $con->query($sql);
+
+            $row = $result->fetch_array();
+
+            echo $row["C"];
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            echo $t;
+        }
+    }
+
+    function obtenerAlbumesInstitucion($idinstitucion, $tipoficha) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+
+            $sql = "Select *
+                    From albumes
+                    Where idinstitucion = $idinstitucion And tipoficha Like '$tipoficha'";
+
+            $result = $con->query($sql);
+
+            while ($row = $result->fetch_array()) {
+                echo "<div class='col-3 divCard'>";
+                echo "<div class='divCardBody'>";
+                /*
+                if (strlen($row["thumbnail"]) == 0) {
+                    echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
+                } else {
+                    echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
+                }
+                */
+                echo "<label class='labelType01'>" . $row["album"] . "</label>";
+                echo "<h4 class=''>Bienes</h4>";
+                echo "<h4 class=''>";
+                echo obtenerTotalBienesAlbum($row["idalbum"], $tipoficha);
+                echo "</h4>";
+                echo "</div>";
+                echo "<div>";
+                echo "<button class='btn fl ghost' onclick='verBienesAlbum(" . $row["idalbum"] . ", \"" . $tipoficha . "\")'>Ir</button>";
+                echo "</div>";
+                echo "</div>";
+            }            
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            echo $t;
+        }
+    }
+
+    function obtenerNombreAlbum($idalbum) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+
+            $sql = "Select *
+                    From albumes
+                    Where idalbum = $idalbum";
+
+            $result = $con->query($sql);
+
+            while ($row = $result->fetch_array()) {
+                return $row["album"];
+            }            
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            return $t;
+        }
+    }
+
+    function obtenerTotalBienesAlbum($idalbum, $tipo) {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+
+            $sql = "Select Count(*) As C
+                    From albumes
+                    Inner Join fichas$tipo
+                    On fichas$tipo.idalbum = albumes.idalbum
+                    Where albumes.idalbum = $idalbum";
+
+            $result = $con->query($sql);
+
+            $row = $result->fetch_array();
+
+            return $row["C"];
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            return $t;
         }
     }
 ?>

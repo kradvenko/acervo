@@ -570,3 +570,41 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.navigation-bar {
+    font-family: 'Poiret One', cursive;
+    border-top: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px solid rgb(143, 143, 143);
+    font-size: 22px;
+    background-color: #000000;
+    color: rgb(255, 154, 117);    
+}
+
+.navigation-bar a {
+    color: #f1f1f1;
+}
+
+.gridNavigation {
+    background-color: rgb(255, 154, 117);
+    height: 30px;
+}
+
+.gridNavigation span {
+    color: #ffffff;
+    font-family: 'Poiret One', cursive;
+    font-size: 19px;
+    border: solid 0.5px;
+    border-color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.gridCurrentPage {
+    font-weight: bold;
+    border: solid 2px;
+    background-color: #000000;
+    color: #ffffff;
+}

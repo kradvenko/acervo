@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Marck+Script|Montserrat|Poiret+One" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/paises.js"></script>
+    <script src="js/ciudades.js"></script>
 
     <title>Acervo artístico de Amado Nervo</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -43,40 +43,34 @@
             </div>
             <div class="col-10">
                 <?php
+                    $idpais = $_GET["idpais"];
+                    $idciudad = $_GET["idciudad"];
+                    $nombrePais = obtenerNombrePais($idpais);
+                    $nombreCiudad = obtenerNombreCiudad($idciudad);
                     echo "<a href='paises.php'>Paises</a> - ";
-                    echo obtenerNombrePais($_GET["idpais"]);
+                    echo "<a href='paisbienes.php?idpais=$idpais'>$nombrePais</a> - ";
+                    echo $nombreCiudad;
                 ?>
             </div>
         </div>
         <?php
-            obtenerHeaderPais($_GET["idpais"]);
+            
         ?>
         <div class="row divPageShortInfo">
             <div class="col-1">
 
             </div>
-            <div class="col-1 labelType01">
-                Ciudades
+            <div class="col-10 labelType01">
+                <?php
+                    echo $nombreCiudad;
+                ?>
             </div>
         </div>
         <div class="row">
             <?php
-                obtenerCiudadesPais($_GET["idpais"]);
+                obtenerInstitucionesCiudad($idciudad);
             ?>
         </div>
-        <div class="row divPageShortInfo">
-            <div class="col-1">
-
-            </div>
-            <div class="col-1 labelType01">
-                Instituciones
-            </div>
-        </div>
-        <div class="row">
-            <?php
-                obtenerInstitucionesPais($_GET["idpais"]);
-            ?>
-        </div>        
         <div class="row divBackgroundBlack">
             <div class="col-12 mainFooter">
                 <b>Acervo Digital Amado Nervo</b> © Derechos Reservados Fundación Yo te bendigo vida 2018.
