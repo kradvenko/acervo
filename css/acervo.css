@@ -295,7 +295,7 @@ body {
 }
 .currentPage {
     text-decoration: none;
-    color: #be0029 !important;
+    color: #490007 !important;
     border-style: none;    
     font-weight: bold;
 }
@@ -357,7 +357,7 @@ body {
 }
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #490007;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -454,7 +454,7 @@ body {
     background-color: rgba(102, 70, 70, 0);
     min-width: 100%;
     transition: all 0.5s;
-    border: 1px solid #f07444;
+    border: 1px solid #490007;
     height: 140px;
 }
 
@@ -606,7 +606,7 @@ body {
 }
 
 .gridNavigation {
-    background-color: rgb(255, 154, 117);
+    background-color: #490007;
     height: 30px;
 }
 

@@ -24,7 +24,7 @@
   
   h1,
   h4 {
-    color: #f07444;
+    color: #490007;
     font-weight: 300;
   }
   
@@ -66,7 +66,7 @@
     width: 100%;
   }
   .cta {
-    background-color: #f07444;
+    background-color: #490007;
     color: white;
     transition: 0.2s ease;
   }
@@ -77,19 +77,19 @@
   
   .ghost {
     background-color: transparent;
-    color: #f07444;
-    border: 1px solid #f07444;
+    color: #490007;
+    border: 1px solid #490007;
     transition: 0.2s ease;
   }
   .ghost:hover {
-    background-color: #f07444;
+    background-color: #490007;
     color: white;
     transition: 0.2s ease;
   }
   
   .secondary {
     background-color: #f3f3f3;
-    color: #f07444;
+    color: #490007;
     transition: 0.2s ease;
   }
   .secondary:hover {

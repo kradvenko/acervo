@@ -28,7 +28,7 @@
                     echo menu();
                 ?>
             </div>
-        </div>        
+        </div>
         <div class="row divBackgroundBlack">
             <div class="col-12 mainFooter">
                 <b>Acervo Digital Amado Nervo</b> © Derechos Reservados Fundación Yo te bendigo vida 2018.

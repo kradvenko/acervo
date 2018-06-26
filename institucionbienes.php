@@ -56,9 +56,6 @@
                 ?>
             </div>
         </div>
-        <?php
-            
-        ?>
         <div class="row divPageShortInfo">
             <div class="col-1">
 
@@ -67,6 +64,66 @@
                 <?php
                     echo $nombreInstitucion;
                 ?>
+            </div>
+        </div>
+        <div class="row divPageShortInfo2">
+            <div class="col-1">
+
+            </div>
+            <div class="col-10 labelType01">
+                Información de la institución
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+
+            </div>
+            <div class="col-10" id="divImagenInstitucion" style="text-align: center;">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+
+            </div>
+            <div class="col-10 labelType01" id="divNombreInstitucion">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+
+            </div>
+            <div class="col-2 labelType01">
+                <b>País</b>
+            </div>
+            <div class="col-2 labelType01">
+                <b>Ciudad</b>
+            </div>
+            <div class="col-7 labelType01">
+                <b>Domicilio</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+
+            </div>
+            <div class="col-2 labelType01" id="divPais">
+                
+            </div>
+            <div class="col-2 labelType01" id="divCiudad">
+                
+            </div>
+            <div class="col-7 labelType01" id="divDireccion">
+                
+            </div>
+        </div>
+        <div class="row divPageShortInfo2">
+            <div class="col-1">
+
+            </div>
+            <div class="col-10 labelType01">
+                Bienes
             </div>
         </div>
         <div class="row">
@@ -200,6 +257,7 @@
 <script>
     $(document).ready(function() {
         $("#aPaises").addClass("currentPage");
+        obtenerInstitucion();
     });
 </script>
 </html>

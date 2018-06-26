@@ -81,3 +81,18 @@ function verFichaBien() {
     window.location.assign('ficha.php?idficha=' + idBienElegido + '&tipo=' + tipo + '&idinstitucion=' + idi + "&idpais=" + idp + "&idciudad=" + idc + "&tipodisplay=" + tipodisplay + "&idalbum=" + idalbum);
     
 }
+
+function obtenerInstitucion() {
+    var url = new URL(window.location.href);
+    var idi = url.searchParams.get("idinstitucion");
+    idInstitucion = idi;
+    $.ajax({url: "php/obtenerInstitucionXML.php", async: false, type: "POST", data: { idInstitucion: idInstitucion }, success: function(res) {
+        $('resultado', res).each(function(index, element) {
+            $("#divImagenInstitucion").html("<img src='imgs/instituciones/" + $(this).find("imagen").text() + "' />");
+            $("#divNombreInstitucion").html($(this).find("nombreInstitucion").text());
+            $("#divPais").html($(this).find("pais").text());
+            $("#divCiudad").html($(this).find("ciudad").text());
+            $("#divDireccion").html($(this).find("domicilio").text() + " " + $(this).find("colonia").text());
+        });
+    }});
+}
