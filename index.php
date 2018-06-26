@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/acervo.css" />
-    <link href="https://fonts.googleapis.com/css?family=Marck+Script|Montserrat|Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script:400,900|Montserrat|Poiret+One" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.js"></script>
 
@@ -17,8 +17,13 @@
 <body>
     <div class="container mainContainer">
         <div class="row divBackgroundBlack">
-            <div class="divLogo">
-
+            <div class="col-12 divLogo">
+                <img src="imgs/logo.png" />
+            </div>
+        </div>
+        <div class="row divSlogan">
+            <div class="col-12" id="divAcervoDigital">
+                <b>ACERVO DIGITAL</b>
             </div>
         </div>
         <div class="">

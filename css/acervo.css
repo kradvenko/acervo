@@ -2,6 +2,31 @@ body {
     background-image: url(../imgs/pattern57.jpg);
 }
 
+@keyframes example {
+    from {background-color: #ffffff;}
+    to {background-color: #910027;}
+}
+
+.divSlogan {
+    text-align: center;
+    background-color: #910027;
+    color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+#divAcervoDigital {
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#divAmadoNervo {
+    font-family: 'Marck Script', cursive;
+}
+
 .mainContainer {
     box-shadow: 1px 1px 10px #888888;
 }
@@ -87,9 +112,7 @@ body {
     background: #ffffff;
 }
 .divLogo {
-    background: url(../imgs/logo.png) no-repeat 0px 0px;
-    width: 220px;
-    height: 85px;
+    text-align: center;
 }
 .divMargin {
     margin-bottom: 5px;
