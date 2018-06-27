@@ -146,7 +146,7 @@
                     ?>
                 </div>
             </div>
-            <div class="col-4 divAcervoBien">
+            <div class="col-4 divAcervoBien" onclick="irInstitucionBienes('libro', window.location.href, 'Libros');">
                 <div class="divAcervoBienHeader">
                     <label>Libros</label>
                 </div>

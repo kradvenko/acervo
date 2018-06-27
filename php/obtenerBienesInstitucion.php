@@ -16,8 +16,14 @@
                                 $urlImagen = $url . "/";
                                 $urlThumb = $url . "/imagenesbienes/thumbs/fotografias/";
                                 break;
+            case "libro":
+                                $urlImagen = $url . "/";
+                                $urlThumb = $url . "/imagenesbienes/thumbs/libros/";
+                                break;
+                                
         }
 
+        echo $url;
         $con = new mysqli($hn, $un, $pw, $db);
 
         $tablaFicha = "fichas" . $tipoFicha;
@@ -31,7 +37,7 @@
                 On instituciones.idinstitucion = $tablaFicha.idinstitucion
                 Where instituciones.idinstitucion Like '$idInstitucion' And $tablaImagen.aprobada = 'SI'";
         
-        $result = $con->query($sql);
+        $result = $con->query($sql);        
 
         $row = $result->fetch_array();
 
@@ -86,10 +92,25 @@
                                         echo $row["titulo"];
                                     }                                    
                                     break;
+                case "libro":
+                                    if (strlen($row["titulo"]) == 0) {
+                                        echo "Sin título";
+                                    } else {
+                                        //echo substr($row["titulo"], 0, 25);
+                                        echo $row["titulo"];
+                                    }                                    
+                                    break;
             }
             echo "</div>";
             echo "<div>";
-            echo "<button class='btn fl ghost' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>Detalles</button>";
+            switch ($tipoFicha) {
+                case "fotografia":
+                                    echo "<button class='btn fl ghost' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>Detalles</button>";
+                                    break;
+                case "libro":
+                                    echo "<button class='btn fl ghost' data-toggle='modal' data-target='#modalMostrarLibro' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>Detalles</button>";                                  
+                                    break;
+            }
             echo "</div>";
             echo "</div>";
         }

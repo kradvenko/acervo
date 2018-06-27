@@ -485,6 +485,14 @@ body {
     min-height: 200px;
 }
 
+.divCardBody img {
+    max-height: 150px;
+}
+
+.divCardFooter {
+      
+}
+
 .divVerBienElementoLabel {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;

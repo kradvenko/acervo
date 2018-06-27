@@ -155,6 +155,50 @@
             </div>
         </div>
     </div>
+    <!--Ventana modal para ver los detalles de un bien fotografía-->
+    <div class="modal fade" id="modalMostrarLibro" tabindex="-1" role="dialog" aria-labelledby="modalMostrarLibro" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Libro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row divVerBienElementoLabel">
+                        Título de la fotografía
+                    </div>
+                    <div class="row divVerBienElementoContenido" id="divLibroTitulo">
+
+                    </div>
+                    <div class="row divVerBienElementoContenidoImagen" id="divLibroImagen">
+
+                    </div>
+                    <div class="row">
+                        <div class="col-4 divVerBienElementoLabel">
+                            Institución
+                        </div>
+                        <div class="col-4 divVerBienElementoLabel">
+                            País
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 divVerBienElementoContenido" id="divLibroInstitucion">
+
+                        </div>
+                        <div class="col-4 divVerBienElementoContenido" id="divLibroPais">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn fl ghost" onclick="verFichaBien()">Ver ficha del bien</button>
+                    <button type="button" class="btn fl ghost" data-dismiss="modal" onclick="">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     $(document).ready(function() {

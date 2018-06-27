@@ -456,13 +456,11 @@
             while ($row = $result->fetch_array()) {
                 echo "<div class='col-3 divCard'>";
                 echo "<div class='divCardBody'>";
-                /*
-                if (strlen($row["thumbnail"]) == 0) {
-                    echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
+                if (strlen($row["imagen"]) == 0) {
+                    
                 } else {
-                    echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
+                    echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
                 }
-                */
                 echo "<label class='labelType01'>" . $row["nombreInstitucion"] . "</label>";
                 echo "<h4 class=''>Bienes</h4>";
                 echo "<h4 class=''>";
@@ -471,7 +469,7 @@
                     );
                 echo "</h4>";
                 echo "</div>";
-                echo "<div>";
+                echo "<div class=''>";
                 echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
                 echo "</div>";
                 echo "</div>";
@@ -501,13 +499,11 @@
             while ($row = $result->fetch_array()) {
                 echo "<div class='col-3 divCard'>";
                 echo "<div class='divCardBody'>";
-                /*
-                if (strlen($row["thumbnail"]) == 0) {
-                    echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
+                if (strlen($row["imagen"]) == 0) {
+                    
                 } else {
-                    echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
+                    echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
                 }
-                */
                 echo "<label class='labelType01'>" . $row["nombreInstitucion"] . "</label>";
                 echo "<h4 class=''>Bienes</h4>";
                 echo "<h4 class=''>";

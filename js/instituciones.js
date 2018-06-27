@@ -62,7 +62,14 @@ function verDetallesBien(id, rutaimagen) {
             });
         }});
     } else if (tipoFicha == 'libro') {
-
+        $.ajax({url: "php/obtenerFichaLibroXML.php", async: false, type: "POST", data: { idFichaLibro: id }, success: function(res) {
+            $('resultado', res).each(function(index, element) {
+                $("#divLibroTitulo").html($(this).find("titulo").text());
+                $("#divLibroImagen").html("<img src='" + rutaimagen + "' />");            
+                $("#divLibroInstitucion").html($(this).find("nombreInstitucion").text());                
+                $("#divLibroPais").html($(this).find("pais").text());
+            });
+        }});
     }
 }
 
