@@ -61,6 +61,9 @@
                         <a href="paises.php" id="aPaises" class="mainMenuElement">Países</a>
                     </div>
                     <div class="dropdown">
+                        <a href="instituciones.php" id="aInstituciones"class="mainMenuElement">Instituciones</a>                        
+                    </div>
+                    <div class="dropdown">
                         <a href="galerias.php" id="aGalerias"class="mainMenuElement">Galerías</a>                        
                     </div>
                     <div class="dropdown">

@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/acervo.css" />
+    <link rel="stylesheet" type="text/css" href="css/ficha.css" />
     <link rel="stylesheet" type="text/css" href="css/button.css" />
     <link href="https://fonts.googleapis.com/css?family=Marck+Script|Montserrat|Poiret+One" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
@@ -54,10 +55,12 @@
                     $tipo = $_GET["tipo"];
                     $tipodisplay = $_GET["tipodisplay"];
                     $idficha = $_GET["idficha"];
-                    if (isset($_GET["idalbum"]) && $_GET["idalbum"] != 'null') {
-                        $idalbum = $_GET["idalbum"];
-                    } else {
-                        $idalbum = obtenerIdAlbumFicha($idficha, $tipo);
+                    if ($tipo == 'fotografia') {
+                        if (isset($_GET["idalbum"]) && $_GET["idalbum"] != 'null') {
+                            $idalbum = $_GET["idalbum"];
+                        } else {
+                            $idalbum = obtenerIdAlbumFicha($idficha, $tipo);
+                        }
                     }
                     $nombrePais = obtenerNombrePais($idpais);
                     $nombreInstitucion = obtenerNombreInstitucion($idinstitucion);
@@ -78,75 +81,14 @@
                 ?>
             </div>
         </div>
-        <div class="row divPageShortInfo3">
-            <div class="col-12">
-                Título de la fotografía
-            </div>
-        </div>
-        <div class="row divVerBienElementoContenido" id="divFotografiaTitulo">
-
-        </div>
-        <div class="row divVerBienElementoContenidoImagen" id="divFotografiaImagen">
-
-        </div>
-        <div id="divFichaFotografia">
-            <div class="row">
-                <div class="col-4 divPageShortInfo3">
-                    Institución
-                </div>
-                <div class="col-4 divPageShortInfo3">
-                    Fecha
-                </div>
-                <div class="col-4 divPageShortInfo3">
-                    País
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 divVerBienElementoContenido" id="divFotografiaInstitucion">
-
-                </div>
-                <div class="col-4 divVerBienElementoContenido" id="divFotografiaFechaToma">
-
-                </div>
-                <div class="col-4 divVerBienElementoContenido" id="divFotografiaPais">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 divPageShortInfo3">
-                    Albúm
-                </div>
-                <div class="col-4 divPageShortInfo3">
-                    Número de fotografía
-                </div>
-                <div class="col-4 divPageShortInfo3">
-                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 divVerBienElementoContenido" id="divFotografiaAlbum">
-
-                </div>
-                <div class="col-4 divVerBienElementoContenido" id="divFotografiaNumeroFotografia">
-
-                </div>
-            </div>
-        </div>
+        <?php
+            obtenerEsquemaFicha($tipo);
+        ?>
         <div class="row">
-            <div class="col-12 divPageShortInfo3">
-                Contexto histórico
-            </div>            
-        </div>
-        <div class="row">
-            <div class="col-12 divVerBienElementoContenido" id="divContextoHistorico">
-                
-            </div>            
-        </div>
-        <div class="row">
-            <div class="col-12 divPageShortInfo3">
-                Imágenes
-            </div>            
-        </div>
+                <div class="col-12 divPageShortInfo3">
+                    Imágenes
+                </div>            
+            </div>
         <div class="row">
             <?php
                 obtenerImagenesFicha($idficha, $tipo);

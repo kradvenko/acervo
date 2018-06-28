@@ -454,23 +454,76 @@
             $result = $con->query($sql);
             
             while ($row = $result->fetch_array()) {
-                echo "<div class='col-3 divCard'>";
+                echo "<div class='col-3'>";
+                echo "<div class='divCard' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
                 echo "<div class='divCardBody'>";
                 if (strlen($row["imagen"]) == 0) {
                     
                 } else {
                     echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
                 }
-                echo "<label class='labelType01'>" . $row["nombreInstitucion"] . "</label>";
-                echo "<h4 class=''>Bienes</h4>";
-                echo "<h4 class=''>";
+                echo "<label class='labelType02'>" . $row["nombreInstitucion"] . "</label><br />";
+                /*echo "<label class='labelType03'>Bienes</label>";
+                echo "<label class='labelType03'>";
                 echo (obtenerTotalFotografiasInstitucion($row["idinstitucion"]) + obtenerTotalPublicacionesInstitucion($row["idinstitucion"]) +
                         obtenerTotalLibrosInstitucion($row["idinstitucion"])
                     );
-                echo "</h4>";
+                echo "</label>";*/
                 echo "</div>";
-                echo "<div class=''>";
-                echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
+                echo "<div class='divCardFooter'>";
+                //echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+            }
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            echo $t;
+        }
+    }
+
+    function obtenerInstitucionesCompletas() {
+        try
+        {
+            require('connection.php');
+
+            $con = new mysqli($hn, $un, $pw, $db);
+            
+            $sql = "Select *
+                    From instituciones
+                    Inner Join paises
+                    On paises.idpais = instituciones.idpais
+                    Order By paises.pais";
+
+            $sql = "Select *
+                    From instituciones
+                    Order By nombreInstitucion";
+    
+            $result = $con->query($sql);
+            
+            while ($row = $result->fetch_array()) {
+                echo "<div class='col-3'>";
+                echo "<div class='divCard' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
+                echo "<div class='divCardBody'>";
+                if (strlen($row["imagen"]) == 0) {
+                    
+                } else {
+                    echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
+                }
+                echo "<label class='labelType02'>" . $row["nombreInstitucion"] . "</label><br />";
+                /*echo "<label class='labelType03'>Bienes</label>";
+                echo "<label class='labelType03'>";
+                echo (obtenerTotalFotografiasInstitucion($row["idinstitucion"]) + obtenerTotalPublicacionesInstitucion($row["idinstitucion"]) +
+                        obtenerTotalLibrosInstitucion($row["idinstitucion"])
+                    );
+                echo "</label>";*/
+                echo "</div>";
+                echo "<div class='divCardFooter'>";
+                //echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
+                echo "</div>";
                 echo "</div>";
                 echo "</div>";
             }
@@ -497,23 +550,25 @@
             $result = $con->query($sql);
             
             while ($row = $result->fetch_array()) {
-                echo "<div class='col-3 divCard'>";
+                echo "<div class='col-3'>";
+                echo "<div class='divCard' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
                 echo "<div class='divCardBody'>";
                 if (strlen($row["imagen"]) == 0) {
                     
                 } else {
                     echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
                 }
-                echo "<label class='labelType01'>" . $row["nombreInstitucion"] . "</label>";
-                echo "<h4 class=''>Bienes</h4>";
-                echo "<h4 class=''>";
+                echo "<label class='labelType02'>" . $row["nombreInstitucion"] . "</label><br />";
+                /*echo "<label class='labelType03'>Bienes</label>";
+                echo "<label class='labelType03'>";
                 echo (obtenerTotalFotografiasInstitucion($row["idinstitucion"]) + obtenerTotalPublicacionesInstitucion($row["idinstitucion"]) +
                         obtenerTotalLibrosInstitucion($row["idinstitucion"])
                     );
-                echo "</h4>";
+                echo "</label>";*/
                 echo "</div>";
-                echo "<div>";
-                echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
+                echo "<div class='divCardFooter'>";
+                //echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
+                echo "</div>";
                 echo "</div>";
                 echo "</div>";
             }
@@ -542,25 +597,25 @@
             $result = $con->query($sql);
             
             while ($row = $result->fetch_array()) {
-                echo "<div class='col-3 divCard'>";
+                echo "<div class='col-3'>";
+                echo "<div class='divCard' onclick='verBienesCiudad(" . $row["idciudad"] . ", " . $row["idpais"] . ")'>";
                 echo "<div class='divCardBody'>";
-                /*
-                if (strlen($row["thumbnail"]) == 0) {
-                    echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
+                if (strlen($row["imagen"]) == 0) {
+                    
                 } else {
-                    echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
+                    echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
                 }
-                */
-                echo "<label class='labelType01'>" . $row["ciudad"] . "</label>";
-                echo "<h4 class=''>Bienes</h4>";
-                echo "<h4 class=''>";
-                echo (obtenerTotalFotografiasCiudad($row["idciudad"]) + obtenerTotalPublicacionesCiudad($row["idciudad"]) +
-                        obtenerTotalLibrosCiudad($row["idciudad"])
+                echo "<label class='labelType02'>" . $row["ciudad"] . "</label><br />";
+                /*echo "<label class='labelType03'>Bienes</label>";
+                echo "<label class='labelType03'>";
+                echo (obtenerTotalFotografiasInstitucion($row["idinstitucion"]) + obtenerTotalPublicacionesInstitucion($row["idinstitucion"]) +
+                        obtenerTotalLibrosInstitucion($row["idinstitucion"])
                     );
-                echo "</h4>";
+                echo "</label>";*/
                 echo "</div>";
-                echo "<div>";
-                echo "<button class='btn fl ghost' onclick='verBienesCiudad(" . $row["idciudad"] . ", " . $row["idpais"] . ")'>Ir</button>";
+                echo "<div class='divCardFooter'>";
+                //echo "<button class='btn fl ghost' onclick='verBienesCiudad(" . $row["idciudad"] . ", " . $row["idpais"] . ")'>Ir</button>";
+                echo "</div>";
                 echo "</div>";
                 echo "</div>";
             }
@@ -612,6 +667,27 @@
             $result = $con->query($sql);
 
             while ($row = $result->fetch_array()) {
+                echo "<div class='col-3'>";
+                echo "<div class='divCard' onclick='verBienesAlbum(" . $row["idalbum"] . ", \"" . $tipoficha . "\")'>";
+                echo "<div class='divCardBody'>";
+                /*
+                if (strlen($row["imagen"]) == 0) {
+                    
+                } else {
+                    echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
+                }
+                */
+                echo "<label class='labelType02'>" . $row["album"] . "</label><br />";
+                /*echo "<label class='labelType03'>Bienes</label>";
+                echo "<label class='labelType03'>";
+                echo obtenerTotalBienesAlbum($row["idalbum"], $tipoficha);
+                echo "</div>";
+                echo "<div class='divCardFooter'>";
+                //echo "<button class='btn fl ghost' onclick='verBienesCiudad(" . $row["idciudad"] . ", " . $row["idpais"] . ")'>Ir</button>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+
                 echo "<div class='col-3 divCard'>";
                 echo "<div class='divCardBody'>";
                 /*
@@ -620,15 +696,8 @@
                 } else {
                     echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
                 }
-                */
-                echo "<label class='labelType01'>" . $row["album"] . "</label>";
-                echo "<h4 class=''>Bienes</h4>";
-                echo "<h4 class=''>";
-                echo obtenerTotalBienesAlbum($row["idalbum"], $tipoficha);
-                echo "</h4>";
+                */               
                 echo "</div>";
-                echo "<div>";
-                echo "<button class='btn fl ghost' onclick='verBienesAlbum(" . $row["idalbum"] . ", \"" . $tipoficha . "\")'>Ir</button>";
                 echo "</div>";
                 echo "</div>";
             }            
@@ -743,11 +812,11 @@
             $con = new mysqli($hn, $un, $pw, $db);
 
             $sql = "Select idalbum
-                    From fichas$tipo                    
+                    From fichas$tipo
                     Where idficha$tipo = $idficha";
 
             $result = $con->query($sql);
-
+            
             $row = $result->fetch_array();
 
             return $row["idalbum"];
@@ -773,6 +842,10 @@
                                     $urlImagen = $url . "/";
                                     $urlThumb = $url . "/imagenesbienes/thumbs/fotografias/";
                                     break;
+                case "libro":
+                                    $urlImagen = $url . "/";
+                                    $urlThumb = $url . "/imagenesbienes/thumbs/libros/";
+                                    break;
             }
 
             $con = new mysqli($hn, $un, $pw, $db);
@@ -786,16 +859,17 @@
             $result = $con->query($sql);
 
             while ($row = $result->fetch_array()) {
-                echo "<div class='col-3 divCard'>";
+                echo "<div class='col-3'>";
+                echo "<div class='divCard' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verFotoBien(" . $row["idficha$tipo"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>";
                 echo "<div class='divCardBody'>";
                 if (strlen($row["thumbnail"]) == 0) {
                     echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
                 } else {
                     echo "<img src='" . $urlThumb . $row["thumbnail"] . "' />";
                 }
+                echo "<div class='divCardBody2Img'>";
                 echo "</div>";
-                echo "<div>";
-                echo "<button class='btn fl ghost' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verFotoBien(" . $row["idficha$tipo"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>Ver</button>";
+                echo "</div>";
                 echo "</div>";
                 echo "</div>";
             } 
@@ -805,6 +879,173 @@
         catch (Throwable $t)
         {
             return $t;
+        }
+    }
+
+    function obtenerEsquemaFicha($tipo) {
+        if ($tipo == 'fotografia') {
+            echo '
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                        </div>
+                        <div class="col-10 divFichaTitulo" id="divFotografiaTitulo">
+                        </div>
+                        <div class="col-1">
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Institución</b>
+                        </div>
+                        <div class="col-7" id="divFotografiaInstitucion">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Fecha</b>
+                        </div>
+                        <div class="col-7" id="divFotografiaFechaToma">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>País</b>
+                        </div>
+                        <div class="col-7" id="divFotografiaPais">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Albúm</b>
+                        </div>
+                        <div class="col-7" id="divFotografiaAlbum">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Número de fotografía</b>
+                        </div>
+                        <div class="col-7" id="divFotografiaNumeroFotografia">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                        <b>Contexto histórico</b>
+                        </div>
+                        <div class="col-7" id="divFotografiaContextoHistorico">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+            ';
+        } else if ($tipo == "libro") {
+            echo '
+                        <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                        </div>
+                        <div class="col-10 divFichaTitulo" id="divLibroTitulo">
+                            
+                        </div>
+                        <div class="col-1">
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Institución</b>
+                        </div>
+                        <div class="col-7" id="divLibroInstitucion">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Autor</b>
+                        </div>
+                        <div class="col-7" id="divLibroAutor">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>País</b>
+                        </div>
+                        <div class="col-7" id="divLibroPais">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                        <b>Contexto histórico</b>
+                        </div>
+                        <div class="col-7" id="divLibroContextoHistorico">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+            ';
         }
     }
 ?>

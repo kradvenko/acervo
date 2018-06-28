@@ -66,16 +66,6 @@
 
             </div>
             <div class="col-10 labelType01">
-                <?php
-                    echo $nombreInstitucion;
-                ?>
-            </div>
-        </div>
-        <div class="row divPageShortInfo2">
-            <div class="col-1">
-
-            </div>
-            <div class="col-10 labelType01">
                 Información de la institución
             </div>
         </div>
@@ -87,43 +77,63 @@
                 
             </div>
         </div>
-        <div class="row">
+        <div class="row divVerBienElementoContenido">
             <div class="col-1">
-
+                
             </div>
-            <div class="col-10 labelType01" id="divNombreInstitucion">
+            <div class="col-3">
+                <b>Institución</b>
+            </div>
+            <div class="col-7" id="divNombreInstitucion">
+                
+            </div>
+            <div class="col-1">
                 
             </div>
         </div>
-        <div class="row">
+        <div class="row divVerBienElementoContenido">
             <div class="col-1">
-
+                
             </div>
-            <div class="col-2 labelType01">
+            <div class="col-3">
                 <b>País</b>
             </div>
-            <div class="col-2 labelType01">
+            <div class="col-7" id="divPais">
+                
+            </div>
+            <div class="col-1">
+                
+            </div>
+        </div>
+        <div class="row divVerBienElementoContenido">
+            <div class="col-1">
+                
+            </div>
+            <div class="col-3">
                 <b>Ciudad</b>
             </div>
-            <div class="col-7 labelType01">
+            <div class="col-7" id="divCiudad">
+                
+            </div>
+            <div class="col-1">
+                
+            </div>
+        </div>
+        <div class="row divVerBienElementoContenido">
+            <div class="col-1">
+                
+            </div>
+            <div class="col-3">
                 <b>Domicilio</b>
             </div>
-        </div>
-        <div class="row">
+            <div class="col-7" id="divDireccion">
+                
+            </div>
             <div class="col-1">
-
-            </div>
-            <div class="col-2 labelType01" id="divPais">
-                
-            </div>
-            <div class="col-2 labelType01" id="divCiudad">
-                
-            </div>
-            <div class="col-7 labelType01" id="divDireccion">
                 
             </div>
         </div>
-        <div class="row divPageShortInfo2">
+        <div class="row divPageShortInfo">
             <div class="col-1">
 
             </div>

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Marck+Script|Montserrat|Poiret+One" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/paises.js"></script>
 
     <title>Acervo artístico de Amado Nervo</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -30,9 +31,15 @@
             <div class="menuContainer">
                 <?php
                     require_once('php/menu.php');
+                    require_once('php/functions.php');
                     echo menu();
                 ?>
             </div>
+        </div>
+        <div class="row">
+            <?php
+                obtenerInstitucionesCompletas();
+            ?>
         </div>
         <div class="row divBackgroundBlack">
             <div class="col-12 mainFooter">

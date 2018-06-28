@@ -157,6 +157,16 @@ body {
     font-family: 'Poiret One', cursive;
 }
 
+.labelType02 {
+    font-size: 20px;
+    font-family: 'Poiret One', cursive;
+}
+
+.labelType03 {
+    font-size: 17px;
+    font-family: 'Poiret One', cursive;
+}
+
 .textbox-center {
     text-align: center;
 }
@@ -457,32 +467,25 @@ body {
 
 .divCard {
     text-align: center;
-    padding: 5px;
+    margin: 2px;
     font-family: 'Montserrat', sans-serif;
-    height: 400px;
+    height: 250px;
+    border: solid 1px #910027;
+    cursor: pointer;
 }
 
-.divCard:hover {
-    background-color: #f1f1f1;
-    max-height: 100%;
-}
-
-.divCard:hover .divCardHeader{
+.divCard:hover{
     background-color: rgba(102, 70, 70, 0.8);
     color: white;
 }
 
-.divCardHeader {
-    color: #000000;
-    background-color: rgba(102, 70, 70, 0);
-    min-width: 100%;
-    transition: all 0.5s;
-    border: 1px solid #490007;
-    height: 140px;
+.divCard label{
+    cursor: pointer;
 }
 
 .divCardBody {
     min-height: 200px;
+    height: 80%;
 }
 
 .divCardBody img {
@@ -490,7 +493,65 @@ body {
 }
 
 .divCardFooter {
-      
+    height: 20%;
+}
+
+.divCard:hover .divCardBody2Img {
+    min-height: 50px;
+    max-width: 100%;
+    background-image: url(../imgs/curly02.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center; 
+}
+
+.divCard2 {
+    text-align: center;
+    margin: 2px;
+    font-family: 'Montserrat', sans-serif;
+    height: 400px;
+    border: solid 1px #910027;
+    cursor: pointer;
+}
+
+.divCard2:hover{
+    background-color: rgba(102, 70, 70, 0.8);
+    color: white;
+}
+
+.divCard2 label{
+    cursor: pointer;
+}
+
+.divCardBody2 {
+    min-height: 200px;
+    height: 30%;
+}
+
+.divCardBody2 img {
+    max-height: 150px;
+}
+
+.divCardFooter2 {
+    height: 20%;
+}
+
+.divCardBody2Img {
+    min-height: 50px;
+    max-width: 100%;
+    background-image: url(../imgs/curly01.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center; 
+}
+
+.divCard2:hover .divCardBody2Img {
+    min-height: 50px;
+    max-width: 100%;
+    background-image: url(../imgs/curly02.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center; 
 }
 
 .divVerBienElementoLabel {
@@ -505,7 +566,9 @@ body {
 .divVerBienElementoContenido {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: dotted #000 1px;
 }
 
 .divVerBienElementoContenidoImagen {

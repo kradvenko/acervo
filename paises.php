@@ -39,8 +39,7 @@
         </div>
         <div class="row">
             <div class="col-12 divPageShortInfo">
-                La obra artística de Amado Nervo forma parte del tesoro cultural de los muchos países en los que el autor vivió y los que visitó,
-                llevado por su naturaleza viajera o por las responsabilidades de sus cargos oficiales.
+                PRESENTACIÓN
             </div>
         </div>
         <div class="row">
