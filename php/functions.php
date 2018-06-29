@@ -455,13 +455,15 @@
             
             while ($row = $result->fetch_array()) {
                 echo "<div class='col-3'>";
-                echo "<div class='divCard' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
-                echo "<div class='divCardBody'>";
+                echo "<div class='divCard2' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
+                echo "<div class='divCardBody2'>";
                 if (strlen($row["imagen"]) == 0) {
                     
                 } else {
                     echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
                 }
+                echo "<div class='divCardBody2Img'>";
+                echo "</div>";
                 echo "<label class='labelType02'>" . $row["nombreInstitucion"] . "</label><br />";
                 /*echo "<label class='labelType03'>Bienes</label>";
                 echo "<label class='labelType03'>";
@@ -470,7 +472,7 @@
                     );
                 echo "</label>";*/
                 echo "</div>";
-                echo "<div class='divCardFooter'>";
+                echo "<div class='divCardFooter2'>";
                 //echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
                 echo "</div>";
                 echo "</div>";
@@ -506,13 +508,15 @@
             
             while ($row = $result->fetch_array()) {
                 echo "<div class='col-3'>";
-                echo "<div class='divCard' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
-                echo "<div class='divCardBody'>";
+                echo "<div class='divCard2' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
+                echo "<div class='divCardBody2'>";
                 if (strlen($row["imagen"]) == 0) {
                     
                 } else {
                     echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
                 }
+                echo "<div class='divCardBody2Img'>";
+                echo "</div>";
                 echo "<label class='labelType02'>" . $row["nombreInstitucion"] . "</label><br />";
                 /*echo "<label class='labelType03'>Bienes</label>";
                 echo "<label class='labelType03'>";
@@ -521,7 +525,7 @@
                     );
                 echo "</label>";*/
                 echo "</div>";
-                echo "<div class='divCardFooter'>";
+                echo "<div class='divCardFooter2'>";
                 //echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
                 echo "</div>";
                 echo "</div>";
@@ -551,13 +555,15 @@
             
             while ($row = $result->fetch_array()) {
                 echo "<div class='col-3'>";
-                echo "<div class='divCard' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
-                echo "<div class='divCardBody'>";
+                echo "<div class='divCard2' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
+                echo "<div class='divCardBody2'>";
                 if (strlen($row["imagen"]) == 0) {
                     
                 } else {
                     echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
                 }
+                echo "<div class='divCardBody2Img'>";
+                echo "</div>";
                 echo "<label class='labelType02'>" . $row["nombreInstitucion"] . "</label><br />";
                 /*echo "<label class='labelType03'>Bienes</label>";
                 echo "<label class='labelType03'>";
@@ -566,7 +572,7 @@
                     );
                 echo "</label>";*/
                 echo "</div>";
-                echo "<div class='divCardFooter'>";
+                echo "<div class='divCardFooter2'>";
                 //echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
                 echo "</div>";
                 echo "</div>";
@@ -603,8 +609,10 @@
                 if (strlen($row["imagen"]) == 0) {
                     
                 } else {
-                    echo "<img src='imgs/instituciones/" . $row["imagen"] . "' />";
+                    echo "<img src='imgs/ciudades/" . $row["imagen"] . "' />";
                 }
+                echo "<div class='divCardBody2Img'>";
+                echo "</div>";
                 echo "<label class='labelType02'>" . $row["ciudad"] . "</label><br />";
                 /*echo "<label class='labelType03'>Bienes</label>";
                 echo "<label class='labelType03'>";

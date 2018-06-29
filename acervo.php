@@ -49,6 +49,8 @@
                         echo obtenerTotalBienes("fotografia");
                     ?>
                 </div>
+                <div class='divCardBody2Img'>
+                </div>
             </div>
             <div class="col-4 divAcervoBien">
                 <div class="divAcervoBienHeader">
@@ -58,10 +60,12 @@
                     <img src="imgs/librosub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
                     <?php 
                         echo obtenerTotalBienes("libro");
                     ?>
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
             <div class="col-4 divAcervoBien">
@@ -72,7 +76,10 @@
                     <img src="imgs/hemerografiasub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
         </div>
@@ -85,10 +92,13 @@
                     <label>Monumentos</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
-                    <img src="imgs/poesiasub.jpg">
+                    <img src="imgs/monumentosub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
             <div class="col-4 divAcervoBien">
@@ -96,10 +106,13 @@
                     <label>Dibujos</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
-                    <img src="imgs/correspondenciasub.jpg">
+                    <img src="imgs/dibujosub.png">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
             <div class="col-4 divAcervoBien">
@@ -107,10 +120,13 @@
                     <label>Pinturas</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
-                    <img src="imgs/documentosub.jpg">
+                    <img src="imgs/pinturasub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
         </div>
@@ -123,10 +139,13 @@
                     <label>Grabados</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
-                    <img src="imgs/revistasub.jpg">
+                    <img src="imgs/grabadosub.png">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
             <div class="col-4 divAcervoBien">
@@ -134,10 +153,13 @@
                     <label>Carteles</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
-                    <img src="imgs/objetosub.jpg">
+                    <img src="imgs/poesiasub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
             <div class="col-4 divAcervoBien">
@@ -145,10 +167,13 @@
                     <label>Partituras</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
-                    <img src="imgs/pinturasub.jpg">
+                    <img src="imgs/partiturasub.png">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
         </div>
@@ -164,7 +189,10 @@
                     <img src="imgs/correspondenciasub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
             <div class="col-4 divAcervoBien">
@@ -172,10 +200,13 @@
                     <label>Documentación</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
-                    <img src="imgs/objetosub.jpg">
+                    <img src="imgs/documentosub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
             <div class="col-4 divAcervoBien">
@@ -183,10 +214,13 @@
                     <label>Audiovisuales</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
-                    <img src="imgs/pinturasub.jpg">
+                    <img src="imgs/audiovisualsub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
         </div>
@@ -199,10 +233,13 @@
                     <label>Grabaciones sonoras</label>
                 </div>
                 <div class="divAcervoBienHedearImg">
-                    <img src="imgs/correspondenciasub.jpg">
+                    <img src="imgs/grabacionsub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
             <div class="col-4 divAcervoBien">
@@ -213,7 +250,10 @@
                     <img src="imgs/objetosub.jpg">
                 </div>
                 <div class="divAcervoBienFooter">
-                    Número de bienes registrados
+                    Número de bienes registrados <br />
+                    0
+                </div>
+                <div class='divCardBody2Img'>
                 </div>
             </div>
         </div>

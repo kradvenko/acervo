@@ -486,6 +486,7 @@ body {
 .divCardBody {
     min-height: 200px;
     height: 80%;
+    padding-top: 10px;
 }
 
 .divCardBody img {
@@ -499,7 +500,7 @@ body {
 .divCard:hover .divCardBody2Img {
     min-height: 50px;
     max-width: 100%;
-    background-image: url(../imgs/curly02.png);
+    background-image: url(../imgs/curly02-s.png);
     background-repeat: no-repeat;
     background-size: 150px;
     background-position: center; 
@@ -526,6 +527,7 @@ body {
 .divCardBody2 {
     min-height: 200px;
     height: 30%;
+    padding-top: 10px;
 }
 
 .divCardBody2 img {
@@ -539,7 +541,7 @@ body {
 .divCardBody2Img {
     min-height: 50px;
     max-width: 100%;
-    background-image: url(../imgs/curly01.png);
+    background-image: url(../imgs/curly01-s.png);
     background-repeat: no-repeat;
     background-size: 150px;
     background-position: center; 
@@ -548,7 +550,7 @@ body {
 .divCard2:hover .divCardBody2Img {
     min-height: 50px;
     max-width: 100%;
-    background-image: url(../imgs/curly02.png);
+    background-image: url(../imgs/curly02-s.png);
     background-repeat: no-repeat;
     background-size: 150px;
     background-position: center; 
