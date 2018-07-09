@@ -30,5 +30,9 @@ function verDetallesBien(id) {
 }
 
 function verFotoBien(tipo, rutaimagen) {
-    $("#divImagen").html("<img src='" + rutaimagen + "' />");   
+    $("#divImagen").html("<img src='" + rutaimagen + "' />");
+}
+
+function verPdfBien(tipo, rutapdf) {
+    $("#divPdf").html("<object data='" + rutapdf + "' type='application/pdf' width='700' height='600' id='oPdf'><a href='" + rutapdf + "'></a></object>");
 }

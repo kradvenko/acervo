@@ -868,7 +868,7 @@
 
             while ($row = $result->fetch_array()) {
                 echo "<div class='col-3'>";
-                echo "<div class='divCard' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verFotoBien(" . $row["idficha$tipo"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>";
+                echo "<div class='divCard' data-toggle='modal' data-target='#modalMostrarImagen' onclick='verFotoBien(" . $row["idficha$tipo"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>";
                 echo "<div class='divCardBody'>";
                 if (strlen($row["thumbnail"]) == 0) {
                     echo "<img src='" . $urlThumb . "no-image.jpg" . "' />";
@@ -1054,6 +1054,53 @@
                         </div>
                     </div>
             ';
+        }
+    }
+
+    function obtenerPDFsFicha($idficha, $tipo) {
+        try
+        {
+            require('connection.php');
+
+            $urlPDF = "";
+
+            switch ($tipo) {
+                case "fotografia":
+                                    $urlPDF = $url . "/";
+                                    return;                                 
+                                    break;
+                case "libro":
+                                    $urlPDF = $url . "/";
+                                    break;
+            }
+
+            $con = new mysqli($hn, $un, $pw, $db);
+
+            $sql = "Select *
+                    From fichas$tipo
+                    Left Join " . $tipo . "pdfs
+                    On fichas$tipo.idficha$tipo = " . $tipo . "pdfs.id$tipo
+                    Where idficha$tipo = $idficha And " . $tipo ."pdfs.aprobado = 'SI'";
+
+            $result = $con->query($sql);
+
+            while ($row = $result->fetch_array()) {
+                echo "<div class='col-3'>";
+                echo "<div class='divCard' data-toggle='modal' data-target='#modalMostrarPDF' onclick='verPdfBien(" . $row["idficha$tipo"] . ", \"" . $urlPDF . $row["rutapdf"] . "\")'>";
+                echo "<div class='divCardBody'>";                
+                echo "<h1 class='divCardLabelBig'>Ver PDF</h1>";
+                echo "<div class='divCardBody2Img'>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+            } 
+
+            mysqli_close($con);
+        }
+        catch (Throwable $t)
+        {
+            return $t;
         }
     }
 ?>

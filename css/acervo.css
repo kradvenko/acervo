@@ -556,6 +556,11 @@ body {
     background-position: center; 
 }
 
+.divCardLabelBig {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
 .divVerBienElementoLabel {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;

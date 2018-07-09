@@ -85,13 +85,23 @@
             obtenerEsquemaFicha($tipo);
         ?>
         <div class="row">
-                <div class="col-12 divPageShortInfo3">
-                    Imágenes
-                </div>            
-            </div>
+            <div class="col-12 divPageShortInfo3">
+                Imágenes
+            </div>            
+        </div>
         <div class="row">
             <?php
                 obtenerImagenesFicha($idficha, $tipo);
+            ?>
+        </div>
+        <div class="row">
+            <div class="col-12 divPageShortInfo3">
+                Archivos
+            </div>            
+        </div>
+        <div class="row">
+            <?php
+                obtenerPDFsFicha($idficha, $tipo);
             ?>
         </div>
         <div class="row divBackgroundBlack">
@@ -101,12 +111,12 @@
         </div>
     </div>
     <!--VENTANAS MODALES-->
-    <!--Ventana modal para ver los detalles de un bien fotografía-->
-    <div class="modal fade" id="modalMostrarFotografia" tabindex="-1" role="dialog" aria-labelledby="modalMostrarFotografia" aria-hidden="true">
+    <!--Ventana modal para ver la imagen del bien-->
+    <div class="modal fade" id="modalMostrarImagen" tabindex="-1" role="dialog" aria-labelledby="modalMostrarImagen" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Fotografía</h5>
+                    <h5 class="modal-title">Imagen</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -122,6 +132,27 @@
             </div>
         </div>
     </div>
+    <!--Ventana modal para ver el pdf del bien-->
+    <div class="modal fade" id="modalMostrarPDF" tabindex="-1" role="dialog" aria-labelledby="modalMostrarPDF" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">PDF</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">  
+                        <div class="row divVerBienElementoContenidoImagen" id="divPdf">
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn fl ghost" data-dismiss="modal" onclick="">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 <script>
     $(document).ready(function() {
