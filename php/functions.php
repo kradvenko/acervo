@@ -503,10 +503,35 @@
             $sql = "Select *
                     From instituciones
                     Order By nombreInstitucion";
+            
+            $sql = "Select instituciones.*, categoriasinstitucion.categoria, paises.pais
+                    From instituciones
+                    Inner Join institucioncategorias
+                    On instituciones.idinstitucion = institucioncategorias.idinstitucion
+                    Inner Join categoriasinstitucion
+                    On categoriasinstitucion.idcategoriainstitucion = institucioncategorias.idcategoria
+                    Inner Join paises
+                    On paises.idpais = instituciones.idpais
+                    Order By categoriasinstitucion.categoria, instituciones.nombreInstitucion";
     
             $result = $con->query($sql);
+            $inicio = true;
             
             while ($row = $result->fetch_array()) {
+                if ($inicio) {
+                    $inicio = false;
+                    $categoriaActual = $row["categoria"];
+                    echo "<div class='col-12 divPageShortInfo3'>
+                            $categoriaActual
+                          </div>";
+                } else {
+                    if ($categoriaActual != $row["categoria"]) {
+                        $categoriaActual = $row["categoria"];
+                        echo "<div class='col-12 divPageShortInfo3'>
+                                $categoriaActual
+                              </div>";
+                    }
+                }
                 echo "<div class='col-3'>";
                 echo "<div class='divCard2' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>";
                 echo "<div class='divCardBody2'>";
@@ -527,6 +552,7 @@
                 echo "</div>";
                 echo "<div class='divCardFooter2'>";
                 //echo "<button class='btn fl ghost' onclick='verBienesInstitucion(" . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ")'>Ir</button>";
+                echo "<label class='labelType02'>" . $row["pais"] . "</label><br />";
                 echo "</div>";
                 echo "</div>";
                 echo "</div>";

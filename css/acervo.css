@@ -535,9 +535,12 @@ body {
 }
 
 .divCardFooter2 {
-    height: 20%;
+    position: relative;
+    top: 40%;
+    height: 10%;
+    background-color: #910027;
+    color: #ffffff;
 }
-
 .divCardBody2Img {
     min-height: 50px;
     max-width: 100%;
