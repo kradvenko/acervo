@@ -1044,7 +1044,7 @@
                         <div class="col-3">
                             <b>Autor</b>
                         </div>
-                        <div class="col-7" id=" ">
+                        <div class="col-7" id="divAutores">
                             
                         </div>
                         <div class="col-1">
