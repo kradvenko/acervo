@@ -23,10 +23,18 @@ function verDetallesBien(id) {
                 $("#divLibroInstitucion").html($(this).find("nombreInstitucion").text());
                 $("#divLibroAutor").html($(this).find("").text());
                 $("#divLibroPais").html($(this).find("pais").text());
+                $("#divLibroImprenta").html($(this).find("imprenta").text());
+                $("#divLibroPrologo").html($(this).find("prologo").text());
+                $("#divLibroEditorial").html($(this).find("editorial").text());
+                $("#divLibroLugarEdicion").html($(this).find("lugaredicion").text());
+                $("#divLibroFechaEdicion").html($(this).find("fechaedicion").text());
+                $("#divLibroFechaImpresion").html($(this).find("fechaedicion").text());
+                $("#divLibroFechareImpresion").html($(this).find("fechaedicion").text());
                 $("#divLibroContextoHistorico").html($(this).find("contextohistorico").text());
             });
         }});
     }
+
 }
 
 function verFotoBien(tipo, rutaimagen) {
@@ -35,4 +43,21 @@ function verFotoBien(tipo, rutaimagen) {
 
 function verPdfBien(tipo, rutapdf) {
     $("#divPdf").html("<object data='" + rutapdf + "' type='application/pdf' width='700' height='600' id='oPdf'><a href='" + rutapdf + "'></a></object>");
+}
+
+function obtenerAutoresFicha() {
+    var url = new URL(window.location.href);
+    var tipoFicha = url.searchParams.get("tipo");
+    var id = url.searchParams.get("idficha");
+    var autores = "";
+    $.ajax({url: "php/obtenerAutoresFichaXML.php", async: false, type: "POST", data: { idFicha: id, tipo: tipoFicha }, success: function(res) {
+        $('resultado', res).each(function(index, element) {
+            if (autores.length == 0) {
+                autores = $(this).find("autor").text();
+            } else {
+                autores = autores + "/" + $(this).find("autor").text();
+            }
+        });
+    }});
+    $("#divAutores").html(autores);
 }

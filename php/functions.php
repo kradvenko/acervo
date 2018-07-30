@@ -1044,7 +1044,7 @@
                         <div class="col-3">
                             <b>Autor</b>
                         </div>
-                        <div class="col-7" id="divLibroAutor">
+                        <div class="col-7" id=" ">
                             
                         </div>
                         <div class="col-1">
@@ -1059,6 +1059,104 @@
                             <b>País</b>
                         </div>
                         <div class="col-7" id="divLibroPais">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Imprenta</b>
+                        </div>
+                        <div class="col-7" id="divLibroImprenta">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Prólogo</b>
+                        </div>
+                        <div class="col-7" id="divLibroPrologo">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Editorial</b>
+                        </div>
+                        <div class="col-7" id="divLibroEditorial">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Lugar edición</b>
+                        </div>
+                        <div class="col-7" id="divLibroLugarEdicion">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Fecha edición</b>
+                        </div>
+                        <div class="col-7" id="divLibroFechaEdicion">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Fecha impresión</b>
+                        </div>
+                        <div class="col-7" id="divLibroFechaImpresion">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
+                            <b>Fecha reimpresión</b>
+                        </div>
+                        <div class="col-7" id="divLibroFechaReimpresion">
                             
                         </div>
                         <div class="col-1">

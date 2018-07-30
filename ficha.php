@@ -158,6 +158,7 @@
     $(document).ready(function() {
         $("#aPaises").addClass("currentPage");
         verDetallesBien();
+        obtenerAutoresFicha();
     });
 </script>
 </html>
