@@ -1168,6 +1168,20 @@
                             
                         </div>
                         <div class="col-3">
+                            <b>Idioma</b>
+                        </div>
+                        <div class="col-7" id="divLibroIdioma">
+                            
+                        </div>
+                        <div class="col-1">
+                            
+                        </div>
+                    </div>
+                    <div class="row divVerBienElementoContenido">
+                        <div class="col-1">
+                            
+                        </div>
+                        <div class="col-3">
                         <b>Contexto histórico</b>
                         </div>
                         <div class="col-7" id="divLibroContextoHistorico">

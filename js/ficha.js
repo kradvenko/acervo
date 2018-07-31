@@ -30,6 +30,7 @@ function verDetallesBien(id) {
                 $("#divLibroFechaEdicion").html($(this).find("fechaedicion").text());
                 $("#divLibroFechaImpresion").html($(this).find("fechaedicion").text());
                 $("#divLibroFechareImpresion").html($(this).find("fechaedicion").text());
+                $("#divLibroIdioma").html($(this).find("idioma").text());
                 $("#divLibroContextoHistorico").html($(this).find("contextohistorico").text());
             });
         }});
