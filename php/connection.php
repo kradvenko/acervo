@@ -2,6 +2,6 @@
     $hn = "localhost";
     $un = "root";
     $pw = "masterkey";
-    $db = "acervoweb";
+    $db = "acervonervo";
     $url = "http://localhost:88/nervo"
 ?>

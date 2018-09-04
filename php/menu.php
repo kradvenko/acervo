@@ -67,6 +67,9 @@
                         <a href="galerias.php" id="aGalerias"class="mainMenuElement">Galerías</a>                        
                     </div>
                     <div class="dropdown">
+                        <a href="buscar.php" id="aBuscar"class="mainMenuElement">Buscar</a>                        
+                    </div>
+                    <div class="dropdown">
                         <a href="contacto.php" id="aContacto" class="mainMenuElement">Contacto</a>                        
                     </div>
             </div>
