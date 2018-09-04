@@ -13,8 +13,6 @@
     <script src="js/acervo.js"></script>
 
     <title>Acervo artístico de Amado Nervo</title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
 </head>
 <body>
     <div class="container mainContainer">

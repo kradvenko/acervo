@@ -12,9 +12,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/ciudades.js"></script>
 
-    <title>Acervo artístico de Amado Nervo</title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <title>Acervo artístico de Amado Nervo</title>    
 </head>
 <body>
     <div class="container mainContainer">

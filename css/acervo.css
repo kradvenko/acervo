@@ -733,3 +733,8 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
+
+.divSearchBar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
