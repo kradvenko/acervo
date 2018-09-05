@@ -16,9 +16,14 @@
         $result = $con->query($sql);
 
         while ($row = $result->fetch_array()) {
-            echo "<div class='col-12'>";
+            echo "<div class='col-12 divResultadoHeader'>";
             echo $row["titulo"];
-            echo "<input type='button' value='Ver ficha' onclick='irFicha(" . $row["idfichalibro"] . ", \"libro\", " . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ", \"Libros\", \"null\""  . ")' />";
+            echo "</div>";
+            echo "<div class='col-12'>";
+            echo "Libro";
+            echo "</div>";
+            echo "<div class='col-12'>";
+            echo "<input type='button' class='btn sm ghost' value='Ver ficha' onclick='irFicha(" . $row["idfichalibro"] . ", \"libro\", " . $row["idinstitucion"] . ", " . $row["idpais"] . ", " . $row["idciudad"] . ", \"Libros\", \"null\""  . ")' />";
             echo "</div>";
         }            
 

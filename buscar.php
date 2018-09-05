@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/acervo.css" />
     <link rel="stylesheet" type="text/css" href="css/button.css" />
+    <link rel="stylesheet" type="text/css" href="css/busqueda.css" />
     <link href="https://fonts.googleapis.com/css?family=Marck+Script:400,900|Montserrat|Poiret+One" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.js"></script>
