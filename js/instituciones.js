@@ -73,6 +73,11 @@ function verDetallesBien(id, rutaimagen) {
     }
 }
 
+function irAlBien(id) {
+    idBienElegido = id;
+    verFichaBien();
+}
+
 function verFichaBien() {
     if (idBienElegido == 0) {
         return;

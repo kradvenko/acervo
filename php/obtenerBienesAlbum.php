@@ -72,10 +72,12 @@
             echo "<div class='col-3'>";
             switch ($tipoFicha) {
                 case "fotografia":
-                                    echo "<div class='divCard2' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>";
+                                    //echo "<div class='divCard2' data-toggle='modal' data-target='#modalMostrarFotografia' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>";
+                                    echo "<div class='divCard2' onclick='irAlBien(" . $row["idficha$tipoFicha"] . ")'>";
                                     break;
                 case "libro":
-                                    echo "<div class='divCard2'data-toggle='modal' data-target='#modalMostrarLibro' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>";                                  
+                                    //echo "<div class='divCard2'data-toggle='modal' data-target='#modalMostrarLibro' onclick='verDetallesBien(" . $row["idficha$tipoFicha"] . ", \"" . $urlImagen . $row["rutaimagen"] . "\")'>";
+                                    echo "<div class='divCard2' onclick='irAlBien(" . $row["idficha$tipoFicha"] . ")'>";
                                     break;
             }
             echo "<div class='divCardBody2'>";

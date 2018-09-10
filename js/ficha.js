@@ -19,19 +19,67 @@ function verDetallesBien(id) {
         $("#divLibro").css("visibility", "visible");
         $.ajax({url: "php/obtenerFichaLibroXML.php", async: false, type: "POST", data: { idFichaLibro: id }, success: function(res) {
             $('resultado', res).each(function(index, element) {
-                $("#divLibroTitulo").html($(this).find("titulo").text());
-                $("#divLibroInstitucion").html($(this).find("nombreInstitucion").text());
-                $("#divLibroAutor").html($(this).find("").text());
-                $("#divLibroPais").html($(this).find("pais").text());
-                $("#divLibroImprenta").html($(this).find("imprenta").text());
-                $("#divLibroPrologo").html($(this).find("prologo").text());
-                $("#divLibroEditorial").html($(this).find("editorial").text());
-                $("#divLibroLugarEdicion").html($(this).find("lugaredicion").text());
-                $("#divLibroFechaEdicion").html($(this).find("fechaedicion").text());
-                $("#divLibroFechaImpresion").html($(this).find("fechaedicion").text());
-                $("#divLibroFechareImpresion").html($(this).find("fechaedicion").text());
-                $("#divLibroIdioma").html($(this).find("idioma").text());
-                $("#divLibroContextoHistorico").html($(this).find("contextohistorico").text());
+                if ($(this).find("titulo").text().length > 0) {
+                    $("#divLibroTitulo").html($(this).find("titulo").text());
+                } else {
+                    $("#divLibroTituloContainer").hide();
+                }
+                //$("#divLibroInstitucion").html($(this).find("nombreInstitucion").text());
+                /*if ($(this).find("titulo").text().length > 0) {
+                    $("#divLibroAutor").html($(this).find("").text());
+                } else {
+                    $("#divLibroAutorContainer").hide();
+                }*/
+                if ($(this).find("pais").text().length > 0) {
+                    $("#divLibroPais").html($(this).find("pais").text());
+                } else {
+                    $("#divLibroPaisContainer").hide();
+                }
+                if ($(this).find("imprenta").text().length > 0) {
+                    $("#divLibroImprenta").html($(this).find("imprenta").text());
+                } else {
+                    $("#divLibroImprentaContainer").hide();
+                }
+                if ($(this).find("prologo").text().length > 0) {
+                    $("#divLibroPrologo").html($(this).find("prologo").text());
+                } else {
+                    $("#divLibroPrologoContainer").hide();
+                }
+                if ($(this).find("editorial").text().length > 0) {
+                    $("#divLibroEditorial").html($(this).find("editorial").text());
+                } else {
+                    $("#divLibroEditorialContainer").hide();
+                }
+                if ($(this).find("lugaredicion").text().length > 0) {
+                    $("#divLibroLugarEdicion").html($(this).find("lugaredicion").text());
+                } else {
+                    $("#divLibroLugarEdicionContainer").hide();
+                }
+                if ($(this).find("fechaedicion").text().length > 0) {
+                    $("#divLibroFechaEdicion").html($(this).find("fechaedicion").text());
+                } else {
+                    $("#divLibroFechaEdicionContainer").hide();
+                }
+                if ($(this).find("fechaimpresion").text().length > 0) {
+                    $("#divLibroFechaImpresion").html($(this).find("fechaimpresion").text());
+                } else {
+                    $("#divLibroFechaImpresionContainer").hide();
+                }
+                if ($(this).find("fechareimpresion").text().length > 0) {
+                    $("#divLibroFechaReimpresion").html($(this).find("fechareimpresion").text());
+                } else {
+                    $("#divLibroFechaReimpresionContainer").hide();
+                }
+                if ($(this).find("idioma").text().length > 0) {
+                    $("#divLibroIdioma").html($(this).find("idioma").text());
+                } else {
+                    $("#divLibroIdiomaContainer").hide();
+                }
+                if ($(this).find("contextohistorico").text().length > 0) {
+                    $("#divLibroContextoHistorico").html($(this).find("contextohistorico").text());
+                } else {
+                    $("#divLibroContextoHistoricoContainer").hide();
+                }
             });
         }});
     }

@@ -927,7 +927,7 @@
                         <div class="col-1">
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <!--<div class="row divVerBienElementoContenido">
                         <div class="col-1">
                             
                         </div>
@@ -940,7 +940,7 @@
                         <div class="col-1">
                             
                         </div>
-                    </div>
+                    </div>-->
                     <div class="row divVerBienElementoContenido">
                         <div class="col-1">
                             
@@ -1014,7 +1014,7 @@
             ';
         } else if ($tipo == "libro") {
             echo '
-                        <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroTituloContainer">
                         <div class="col-1">
                         </div>
                         <div class="col-10 divFichaTitulo" id="divLibroTitulo">
@@ -1023,7 +1023,7 @@
                         <div class="col-1">
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <!--<div class="row divVerBienElementoContenido">
                         <div class="col-1">
                             
                         </div>
@@ -1036,8 +1036,8 @@
                         <div class="col-1">
                             
                         </div>
-                    </div>
-                    <div class="row divVerBienElementoContenido">
+                    </div>-->
+                    <div class="row divVerBienElementoContenido" id="divLibroAutorContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1051,7 +1051,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroPaisContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1065,7 +1065,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroImprentaContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1079,7 +1079,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroPrologoContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1093,7 +1093,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroEditorialContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1107,7 +1107,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroLugarEdicionContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1121,7 +1121,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroFechaEdicionContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1135,7 +1135,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroFechaImpresionContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1149,7 +1149,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroFechaReimpresionContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1163,7 +1163,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroIdiomaContainer">
                         <div class="col-1">
                             
                         </div>
@@ -1177,7 +1177,7 @@
                             
                         </div>
                     </div>
-                    <div class="row divVerBienElementoContenido">
+                    <div class="row divVerBienElementoContenido" id="divLibroContextoHistoricoContainer">
                         <div class="col-1">
                             
                         </div>
